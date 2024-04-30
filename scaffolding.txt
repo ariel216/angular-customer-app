@@ -1,0 +1,16 @@
+
+-features
+    --auth
+    --admin
+    --articles
+    --
+-core
+    --guards
+    --interceptors
+    --models
+    --services
+-shared
+    --components
+    --directives
+    --pipes
+
