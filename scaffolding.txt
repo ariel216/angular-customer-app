@@ -2,8 +2,13 @@
 -features
     --auth
     --admin
-    --articles
-    --
+    --home
+    --shopping
+        --orders
+        --trackings
+        --notifications
+        --bills
+        --invoices
 -core
     --guards
     --interceptors
