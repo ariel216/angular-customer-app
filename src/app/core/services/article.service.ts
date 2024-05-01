@@ -9,19 +9,11 @@ import { Article } from '../models/article';
 export class ArticleService {
   constructor(private http: HttpClient) {}
 
-  getArticles(): Observable<Article[]> {
-    //return this.http.get<Article[]>(`https://dummyjson.com/products`);
-
-    return this.http.get(`https://dummyjson.com/products`).pipe(
-      tap((response: any) => {
-        (response.products as Article[]).forEach((articulo) => {});
+  getArticles():Observable<Article[]>{
+    return this.http.get<Article[]>(`https://dummyjson.com/products`).pipe(
+      map((response: any) => {        
+        return response.products;
       }),
-      map((response: any) => {
-        (response.products as Article[]).map((articulo) => {
-          return articulo;
-        });
-        return response;
-      })
     );
   }
 }

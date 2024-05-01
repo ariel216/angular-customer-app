@@ -1,21 +1,13 @@
 import { Component } from '@angular/core';
-import { ArticleService } from '../../../core/services/article.service';
-import { Article } from '../../../core/models/article';
-import { Observable } from 'rxjs';
+import { ListArticlesComponent } from '../../../shared/components/list-articles/list-articles.component';
 
 @Component({
   selector: 'app-articles',
   standalone: true,
-  imports: [],
+  imports: [ListArticlesComponent],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.css',
 })
 export class ArticlesComponent {
-  articles$!: Article[];
-
-  constructor(private articleService: ArticleService) {}
-
-  ngOnInit(): void {
-    this.articles$ = this.articleService.getArticles();
-  }
+  
 }

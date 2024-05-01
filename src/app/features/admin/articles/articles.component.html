@@ -2,11 +2,25 @@
   <div class="card-header">Artículos</div>
   <div class="card-body">
     <h4 class="card-title">Artículos</h4>
-    <ul>
-      @for (item of articles$; track item) {
-      <li></li>
-      <li></li>
-      }
-    </ul>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem est fugiat illo, veniam nesciunt non doloremque aliquam sed iure necessitatibus ut tenetur sit aspernatur dolores at quos odit commodi perspiciatis?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem est fugiat illo, veniam nesciunt non doloremque aliquam sed iure necessitatibus ut tenetur sit aspernatur dolores at quos odit commodi perspiciatis?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem est fugiat illo, veniam nesciunt non doloremque aliquam sed iure necessitatibus ut tenetur sit aspernatur dolores at quos odit commodi perspiciatis?
+    </p>
+    @defer () {
+     <app-list-articles/>
+    }@placeholder {
+      <ul>
+        <li>Get Items...</li>
+      </ul>
+    }@loading {
+      <ul>
+        <li>Cargando...</li>
+      </ul>
+    }    
   </div>
 </div>
